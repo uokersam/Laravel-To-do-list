@@ -63,6 +63,9 @@
             }
         </style>
     </head>
+    <?php
+            Route::redirect('/', '/foo');
+    ?>
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))

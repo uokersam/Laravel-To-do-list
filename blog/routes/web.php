@@ -11,10 +11,28 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+Route::redirect('/', '/foo');
+
+
+Route::match(['get', 'post'], '/getorpost', function () {
+    //
 });
 
-Route::get('/foo', function () {
+Route::any('/foo', function () {
     return view('foo');
 });
+
+Route::get('user/{id}', function ($id) {
+    return 'User' . $id;
+});
+
+Route::get('user/{id}/some/{any}', function ($id, ...$any) {
+    $any = implode($any);
+
+    return "User {$id}: <br>
+            And args is {$any}";
+});
+
