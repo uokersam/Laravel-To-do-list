@@ -11,10 +11,9 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-Route::redirect('/', '/foo');
+Route::get('/', function () {
+    return view('layouts.app');
+});
 
 
 Route::match(['get', 'post'], '/getorpost', function () {
