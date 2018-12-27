@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('layouts.app');
 });
 
+Route::get('/dbtest', function () {
+    return view('dbtest');
+});
+
+Route::get('/show', 'ShowUsers@show');
 
 Route::match(['get', 'post'], '/getorpost', function () {
     //

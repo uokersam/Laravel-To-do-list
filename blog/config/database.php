@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('pgsql', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -58,11 +58,11 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'host' => env('127.0.0.1', '127.0.0.1'),
+            'port' => env('5432', '5432'),
+            'database' => env('edu_laravel', 'edu_laravel'),
+            'username' => env('edu_laravel', 'edu_laravel'),
+            'password' => env('edu_laravel', 'edu_laravel'),
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
