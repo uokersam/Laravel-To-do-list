@@ -5,6 +5,8 @@
         hello from dbtest
     </div>
 
+
+    <h4>users list</h4>
     <ul>
         @foreach($users as $user)
             <li>
@@ -12,6 +14,4 @@
             </li>
         @endforeach
     </ul>
-
-    {{ $some }}
 @endsection

@@ -10,9 +10,7 @@ class ShowUsers extends Controller
 {
     public function show()
     {
-        $some = 'some var';
         $users = DB::select('SELECT * FROM users');
-//        $users = '';
-        return view('dbtest', ['users' => $users, 'some' => $some]);
+        return view('dbtest', ['users' => $users]);
     }
 }
