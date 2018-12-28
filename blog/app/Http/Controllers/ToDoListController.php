@@ -11,8 +11,8 @@ class ToDoListController extends Controller
 {
     public function create()
     {
-//        $content = $_POST['textitem'];
-        DB::insert('INSERT INTO todolist(id, content) VALUES(DEFAULT, \'text\')');
+        $content = $_POST['textitem'];
+        DB::insert('INSERT INTO todolist(id, content) VALUES(DEFAULT, :content)', [$content]);
         return redirect()->to('/todo');
     }
 
