@@ -12,7 +12,8 @@ class ToDoListController extends Controller
     public function create()
     {
         $content = $_POST['textitem'];
-        DB::insert('INSERT INTO todolist(id, content) VALUES(DEFAULT, :content)', [$content]);
+        DB::insert('INSERT INTO todolist(id, content) VALUES(DEFAULT, :content)',
+            [$content]);
         return redirect()->to('/todo');
     }
 
@@ -29,7 +30,8 @@ class ToDoListController extends Controller
 
     public function delete()
     {
-
+        DB::delete('DELETE FROM todolist WHERE id IN(SELECT id FROM todolist ORDER BY id DESC LIMIT 1)');
+        return redirect()->to('/todo');
     }
 
 

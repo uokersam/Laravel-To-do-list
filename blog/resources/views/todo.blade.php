@@ -15,5 +15,10 @@
         <button type="submit">Submit</button>
     </form>
 
+    <form action="{{ action('ToDoListController@delete') }}" method="post">
+        @csrf
+        <button>Delete last element</button>
+    </form>
+
 
 @endsection

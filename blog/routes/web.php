@@ -23,6 +23,7 @@ Route::get('/show', 'ShowUsers@show');
 
 Route::get('/todo', 'ToDoListController@show');
 Route::post('/createitem', 'ToDoListController@create');
+Route::post('/deleteitem', 'ToDoListController@delete');
 
 Route::match(['get', 'post'], '/getorpost', function () {
     //
