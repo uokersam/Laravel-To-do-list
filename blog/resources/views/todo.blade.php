@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'To-do list')
+
 @section('content')
     <hr>
     <b>To-do list:</b>

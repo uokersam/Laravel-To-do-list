@@ -1,19 +1,25 @@
-
-
-@section('title', 'App page')
 <!doctype html>
 <html lang="en">
-@include('helpers.head')
-<body>
 
+@section('title', 'Home')
+@include('helpers.header')
+
+<body>
+<h1>Laravel educational project</h1>
+<hr>
+<h2>Navigation</h2>
 @include('helpers.menu')
+<hr>
 
 @section('sidebar')
-    this is template master sidebar
+
 @show
 
 <div class="container">
     @yield('content')
 </div>
+
+@include('helpers.footer')
+
 </body>
 </html>
