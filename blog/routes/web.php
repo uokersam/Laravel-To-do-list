@@ -21,6 +21,9 @@ Route::get('/dbtest', function () {
 
 Route::get('/show', 'ShowUsers@show');
 
+Route::get('/todo', 'ToDoListController@show');
+Route::post('/createitem', 'ToDoListController@create');
+
 Route::match(['get', 'post'], '/getorpost', function () {
     //
 });
