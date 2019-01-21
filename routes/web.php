@@ -48,7 +48,3 @@ Route::get('user/{id}/some/{any}', function ($id, ...$any) {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

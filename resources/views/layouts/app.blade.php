@@ -22,6 +22,10 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+            @include('helpers.menu')
+            @section('sidebar')
+
+            @show
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -38,6 +42,7 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -76,5 +81,7 @@
             @yield('content')
         </main>
     </div>
+    @include('helpers.footer')
+
 </body>
 </html>
