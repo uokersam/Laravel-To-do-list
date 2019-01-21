@@ -11,5 +11,5 @@
 
 @section('content')
     <hr>
-    <p>this is a content section</p>
+    <p class="foo">this is a content section</p>
 @endsection

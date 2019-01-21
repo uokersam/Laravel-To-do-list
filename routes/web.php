@@ -15,10 +15,6 @@ Route::get('/', function () {
     return view('layouts.app');
 });
 
-Route::get('/dbtest', function () {
-    return view('dbtest');
-});
-
 Route::get('/show', 'ShowUsers@show');
 
 Route::get('/todo', 'ToDoListController@show');
