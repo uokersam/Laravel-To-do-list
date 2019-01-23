@@ -4,19 +4,18 @@
 @include('helpers.head')
 
 <body>
-@include('helpers.header')
-
 <div id="app">
-    @include('helpers.menu')
+
+    @include('helpers.header')
 
     <main class="py-4">
         @yield('content')
     </main>
+
+    @yield('sidebar')
+
+    @include('helpers.footer')
 </div>
-
-@yield('sidebar')
-
-@include('helpers.footer')
 
 </body>
 </html>
