@@ -15,20 +15,12 @@ Route::get('/', function () {
     return view('layouts.app');
 });
 
-Route::get('/show', 'ShowUsers@show');
-
+// to-do list page ------------------------------------------
 Route::get('/todo', 'ToDoListController@show');
 Route::post('/createitem', 'ToDoListController@create');
 Route::post('/deleteitem', 'ToDoListController@delete');
 
-Route::match(['get', 'post'], '/getorpost', function () {
-    //
-});
-
-Route::any('/foo', function () {
-    return view('foo');
-});
-
+// Auth ------------------------------------------
 Route::get('user/{id}', function ($id) {
     return 'User' . $id;
 });
@@ -40,7 +32,11 @@ Route::get('user/{id}/some/{any}', function ($id, ...$any) {
             And args is {$any}";
 });
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Other ------------------------------------------
+Route::match(['get', 'post'], '/getorpost', function () {
+    //
+});
