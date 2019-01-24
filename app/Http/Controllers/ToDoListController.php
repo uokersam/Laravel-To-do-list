@@ -20,7 +20,7 @@ class ToDoListController extends Controller
     public function show()
     {
         $items = DB::select('SELECT * FROM todolist');
-        return view('todo', ['items' => $items]);
+        return view('pages.todo', ['items' => $items]);
     }
 
     public function edit()
