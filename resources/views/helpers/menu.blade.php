@@ -14,8 +14,9 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-                <a href="/todo">To-do list</a>
-                <a href="/foo">Foo page</a>
+                <li>
+                    <a href="/todo">To-do list</a>
+                </li>
             </ul>
 
             <!-- Right Side Of Navbar -->
