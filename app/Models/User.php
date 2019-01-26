@@ -11,6 +11,16 @@ class User extends Authenticatable
     use Notifiable;
 
     /**
+     * Set and encrypt the password attribute.
+     *
+     * @param $value
+     */
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = bcrypt($value);
+    }
+    
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
