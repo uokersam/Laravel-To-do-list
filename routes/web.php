@@ -12,31 +12,5 @@
 */
 
 Route::get('/', function () {
-    return view('layouts.app');
-});
-
-// to-do list page ------------------------------------------
-Route::get('/todo', 'ToDoListController@show');
-Route::post('/createitem', 'ToDoListController@create');
-Route::post('/deleteitem', 'ToDoListController@delete');
-
-// Auth ------------------------------------------
-Route::get('user/{id}', function ($id) {
-    return 'User' . $id;
-});
-
-Route::get('user/{id}/some/{any}', function ($id, ...$any) {
-    $any = implode($any);
-
-    return "User {$id}: <br>
-            And args is {$any}";
-});
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-// Other ------------------------------------------
-Route::match(['get', 'post'], '/getorpost', function () {
-    //
+    return view('welcome');
 });
