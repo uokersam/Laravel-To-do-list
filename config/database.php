@@ -59,7 +59,7 @@ return [
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '5432'),
+            'port' => env('DB_PORT', '5433'),
             'database' => env('DB_DATABASE', 'eizendb'),
             'username' => env('DB_USERNAME', 'eizenuser'),
             'password' => env('DB_PASSWORD', 'eizenpassword'),
