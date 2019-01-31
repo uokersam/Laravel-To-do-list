@@ -19,4 +19,12 @@ Route::post('/send', 'EmailController@send');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::middleware(['auth'])->group(function () {
+    Route::resource('tasks', 'TaskController', [
+        'only' => [
+            'index',
+            'store',
+            'update'
+        ]
+    ]);
+});
