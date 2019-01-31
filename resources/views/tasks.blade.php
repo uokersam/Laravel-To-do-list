@@ -15,7 +15,7 @@
 
                     <div class="card-body">
 
-                        <form action="{{ route('task.store') }}">
+                        <form action="{{ route('tasks.store') }}">
                             @csrf
                             <div class="form-group">
                                 <label for="title">Title</label>
