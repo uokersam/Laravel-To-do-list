@@ -18,7 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::middleware(['auth'])->group(function () {
-    Route::resource('task', 'TaskController', [
+    Route::resource('tasks', 'TaskController', [
         'only' => [
             'index',
             'store',
