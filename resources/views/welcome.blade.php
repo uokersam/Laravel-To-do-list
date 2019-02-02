@@ -68,7 +68,6 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/tasks') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
@@ -84,6 +83,13 @@
                     {{ config('app.name') }}
                 </div>
 
+                <div class="links">
+                    @auth
+                        <div class="title m-b-md">
+                            <a href="{{ url('/tasks') }}">Tasks</a>
+                        </div>
+                    @endauth
+                </div>
             </div>
         </div>
     </body>
